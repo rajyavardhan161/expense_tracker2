@@ -11,25 +11,24 @@ function ViewExpense() {
   }, []);
 
   return (
-    <div style={{ background: "white", minHeight: "100vh", padding: "20px" }}>
-      <h2 className="text-xl font-bold mb-4">Expense Statements</h2>
-
-      <table className="border-collapse border w-full">
+    <div className="main">
+      <h2 className="heading">Expense Statements</h2>
+      <table>
         <thead>
           <tr>
-            <th className="border p-2">S.NO</th>
-            <th className="border p-2">Date</th>
-            <th className="border p-2">Detail</th>
-            <th className="border p-2">Amount</th>
+            <th>S.NO</th>
+            <th>Date</th>
+            <th>Detail</th>
+            <th>Amount</th>
           </tr>
         </thead>
         <tbody>
           {expenses.map((exp, i) => (
             <tr key={i}>
-              <td className="border p-2">{i + 1}</td>
-              <td className="border p-2">{exp.date}</td>
-              <td className="border p-2">{exp.detail}</td>
-              <td className="border p-2">{exp.amount}</td>
+              <td>{i + 1}</td>
+              <td>{exp.date}</td>
+              <td>{exp.detail}</td>
+              <td>{exp.amount}</td>
             </tr>
           ))}
         </tbody>
@@ -37,5 +36,4 @@ function ViewExpense() {
     </div>
   );
 }
-
 export default ViewExpense;
