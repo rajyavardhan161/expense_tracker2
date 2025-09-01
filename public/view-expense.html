@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Expense Statements</title>
+    <link rel="stylesheet" href="/view-expense.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h2 class="heading">Expense Statements</h2>
+    <table id="expenseTable">
+      <tr>
+        <th>S.NO</th>
+        <th>Date</th>
+        <th>Detail</th>
+        <th>Amount</th>
+      </tr>
+    </table>
+    </div>
+
+    <script>
+      const data = JSON.parse(localStorage.getItem("expensesData")) || [];
+      const table = document.getElementById("expenseTable");
+
+      data.forEach((exp, i) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${i + 1}</td>
+          <td>${exp.date}</td>
+          <td>${exp.detail}</td>
+          <td>${exp.amount}</td>
+        `;
+        table.appendChild(row);
+      });
+    </script>
+  </body>
+</html>
