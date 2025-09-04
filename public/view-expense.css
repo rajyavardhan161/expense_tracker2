@@ -4,14 +4,12 @@ body {
   box-sizing: border-box;
   font-family: Arial, sans-serif; 
 }
-
 .main {
   min-height: 100vh;
   width: 100%;
   background: url(exp.webp) no-repeat center top;
   background-size: cover;
 }
-
 .heading {
   display: flex;
   justify-content: center;
@@ -22,17 +20,27 @@ body {
   margin: auto;
   color: rgba(0, 0, 0, 0.975);
 }
-
 table {
   border-collapse: collapse; 
   width: 90%;
   margin: 20px auto;
 }
-
 th, td {
   border: 1px solid #333; 
   padding: 8px; 
   text-align: center;
+  background: rgba(0, 0, 0, 0.384);
+  color: white;
+  box-shadow: 0 2px 6px rgb(253, 253, 253);
+}
+.input-field {
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin: 5px 0 0 75px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  width: 140px;
   background: rgba(0, 0, 0, 0.384);
   color: white;
   box-shadow: 0 2px 6px rgb(253, 253, 253);
